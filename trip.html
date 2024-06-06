@@ -9,6 +9,92 @@
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+  <fieldset>
+    <legend>Reiseinformationen</legend>
+    <label for="abflughafen">Abflughafen:</label>
+    <select id="abflughafen" name="abflughafen">
+      <optgroup label="Deutschland">
+        <option value="FRA">Frankfurt</option>
+        <option value="MUC">München</option>
+      </optgroup>
+      <optgroup label="Österreich">
+        <option value="VIE">Wien</option>
+        <option value="SZG">Salzburg</option>
+      </optgroup>
+      <optgroup label="Italien">
+        <option value="MXP">Mailand</option>
+        <option value="FCO">Rom</option>
+      </optgroup>
+      <optgroup label="Frankreich">
+        <option value="CDG">Paris</option>
+        <option value="ORY">Paris Orly</option>
+      </optgroup>
+    </select><br>
+
+    <label for="hotel">Art der Unterkunft:</label><br>
+    <input type="radio" id="hotel" name="art-der-unterkunft" value="Hotel">
+    <label for="hotel">Hotel</label><br>
+    <input type="radio" id="ferienwohnung" name="art-der-unterkunft" value="Ferienwohnung">
+    <label for="ferienwohnung">Ferienwohnung</label><br>
+    <input type="radio" id="hostel" name="art-der-unterkunft" value="Hostel">
+    <label for="hostel">Hostel</label><br>
+
+    <label for="reiseversicherung">Zusatzleistungen:</label><br>
+    <input type="checkbox" id="reiseversicherung" name="zusatzleistungen[]" value="Reiseversicherung">
+    <label for="reiseversicherung">Reiseversicherung</label><br>
+    <input type="checkbox" id="flughafentransfer" name="zusatzleistungen[]" value="Flughafentransfer">
+    <label for="flughafentransfer">Flughafentransfer</label><br>
+    <input type="checkbox" id="zusatzgepaeck" name="zusatzleistungen[]" value="Zusätzliches Gepäck">
+    <label for="zusatzgepaeck">Zusätzliches Gepäck</label><br>
+
+    <label for="reisezeitraum-start">Reisezeitraum - Start:</label>
+    <input type="date" id="reisezeitraum-start" name="reisezeitraum-start" required><br>
+
+    <label for="reisezeitraum-ende">Reisezeitraum - Ende:</label>
+    <input type="date" id="reisezeitraum-ende" name="reisezeitraum-ende" required><br>
+
+    <label for="reisedauer">Reisedauer (Tage):</label>
+    <input type="number" id="reisedauer" name="reisedauer" min="1" max="21" required><br>
+
+    <label for="reisende-personen">Anzahl der reisenden Personen:</label>
+    <input type="number" id="reisende-personen" name="reisende-personen" min="1" required><br>
+
+    <label for="fluggesellschaft">Bevorzugte Fluggesellschaft:</label>
+    <select id="fluggesellschaft" name="fluggesellschaft">
+      <option value="Lufthansa">Lufthansa</option>
+      <option value="Swiss">Swiss</option>
+      <option value="Austrian">Austrian Airlines</option>
+    </select><br>
+
+    <label for="priority-check-in">Weitere Dienstleistungen:</label><br>
+    <input type="checkbox" id="priority-check-in" name="weitere-dienstleistungen[]" value="Priority-Check-In">
+    <label for="priority-check-in">Priority-Check-In</label><br>
+    <input type="checkbox" id="zusaetzliches-handgepaeck" name="weitere-dienstleistungen[]" value="Zusätzliches Handgepäck">
+    <label for="zusaetzliches-handgepaeck">Zusätzliches Handgepäck</label><br>
+    <input type="checkbox" id="mietwagen" name="weitere-dienstleistungen[]" value="Mietwagen">
+    <label for="mietwagen">Mietwagen</label><br>
+
+    <label for="reiseziel">Reiseziel:</label>
+    <input list="reiseziele" id="reiseziel" name="reiseziel">
+    <datalist id="reiseziele">
+      <option value="Paris">
+      <option value="Rom">
+      <option value="Wien">
+      <option value="London">
+      <option value="New York">
+    </datalist><br>
+
+    <label for="email">E-Mail-Adresse:</label>
+    <input type="email" id="email" name="email" required><br>
+
+  </fieldset>
+
+  <input type="reset" value="Formular zurücksetzen">
+  <input type="submit" value="Formular absenden">
+</form>
+
+
 
 </body>
 </html>
